@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!--header will be the same on each page, with the exception of the title name-->  
+<head>
+    <title>humidity</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+        <!--navbar; this will be the same on each page.--> 
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="row">
+              
+              <!--navbar-the button collapses the navigation links with a small screen-->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="index.html" id="logo">Latitude</a>  
+              </div>
+
+              <!--navbar RHS-->
+              <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right navbar-right-custom">
+                <!--dropdown-->
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="plot_temp.html">Maximum Temperature</a></li>
+                    <li><a href="plot_humid.html">Humidity</a></li>
+                    <li><a href="plot_cloud.html">Cloudiness</a></li>
+                    <li><a href="plot_wind.html">Wind Speed</a></li>
+                  </ul>
+                </li>
+                <li><a href="comparison.html">Comparison</a></li>
+                <li><a href="data.html">Data</a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!--body below the navbar; it will have it's own container-->
+        <div class="container">
+          <div class="row">
+
+            <!--Create a column '8'/12 for description. There will be diff descriptions for each plot pg.-->
+            <div class="description-box col-md-8">
+              <h1 class="description-header">Latitude vs. Humidity</h1>
+              <hr>
+              <img src="resources/Fig2_humid.png" alt="" id="description-plot-fig" class="img-responsive"/>
+              <p>There is not a strong relationship between humidity and the city latitude. However on the date this data was pulled,
+                 there is a large cluster of cities, between the 50 to 70 degree latitude lines, that have humidity that goes beyond 70%.
+                 There were a number of cities, along all the latitude lines, that reached 100% humidity.</p>
+            </div>
+            
+            <!--create a column '4'/12 for visualizations. This will be the same for each plot pg.-->
+            <div class="visualizations-box col-md-4">
+              <h1 class="visualizations-header">Visualizations</h1>
+              <hr>
+                <a href="plot_temp.html"><img src="resources/Fig1_temp.png"
+                  alt="Latitude vs. Max Temperature" class="figure"></a>
+                <a href="plot_humid.html"><img src="resources/Fig2_humid.png"
+                  alt="Latitude vs. Humidity" class="figure"></a>
+                <a href="plot_cloud.html"><img src="resources/Fig3_cloud.png"
+                  alt="Latitude vs. Cloudiness" class="figure"></a>
+                <a href="plot_wind.html"><img src="resources/Fig4_wind.png"
+                  alt="Latitude vs. Wind Speed" class="figure"></a> 
+              </div>
+          
+          </div>
+  </body>
+  
+  <!--the footer will be the same on each page.-->
+  <footer>
+      <footer class="footer navbar-fixed-bottom">
+      <div class="footer-top-trim"></div>
+      <div class="footer-mid-trim"></div>
+  </footer>
+
+</html>
